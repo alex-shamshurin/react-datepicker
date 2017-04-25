@@ -51,6 +51,7 @@ export default class DatePicker extends React.Component {
     onChangeRaw: PropTypes.func,
     onFocus: PropTypes.func,
     onMonthChange: PropTypes.func,
+    onDayMouseEnter: PropTypes.func,
     openToDate: PropTypes.object,
     peekNextMonth: PropTypes.bool,
     placeholderText: PropTypes.string,
@@ -89,6 +90,7 @@ export default class DatePicker extends React.Component {
       onFocus () {},
       onBlur () {},
       onSelect () {},
+      onDayMouseEnter() {},
       onClickOutside () {},
       onMonthChange () {},
       popoverAttachment: 'top left',
@@ -344,6 +346,7 @@ export default class DatePicker extends React.Component {
         excludeDates={this.props.excludeDates}
         filterDate={this.props.filterDate}
         onClickOutside={this.handleCalendarClickOutside}
+        onDayMouseEnter={this.props.onDayMouseEnter}
         highlightDates={this.props.highlightDates}
         includeDates={this.props.includeDates}
         inline={this.props.inline}
